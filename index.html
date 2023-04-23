@@ -9,79 +9,42 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 420cain.</tw-noscript></noscript></tw-story>
-<tw-storydata name="420cain" startnode="5" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="367098AB-CA94-4257-A78B-7D75B1541A65" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-#save-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 9999;
-}
-
-tw-sidebar tw-icon.redo {
-	display: none;
-}
-tw-sidebar tw-icon.undo {
-	display: none;
-}
-
-/* Use Pridi font family */
-@import url('https://fonts.googleapis.com/css2?family=Pridi&display=swap');
+<tw-storydata name="420cain" startnode="5" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="367098AB-CA94-4257-A78B-7D75B1541A65" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Set the background color to dark green */
 body {
-  background-color: #f8f8f8;
-  font-family: 'Pridi', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
+  background-color: #0D3B66;
 }
 
-/* Add widescreen effect */
-#passages {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+/* Set the color of the story text to beige and use the Crimson Pro font with fallbacks */
+.tw-story p {
+  color: #FFF8E8;
+  font-family: 'Crimson Pro', serif;
+  font-size: 18px;
 }
 
-#story {
-  max-width: 800px;
-  padding: 50px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+/* Set the color of links to olive green and use the Crimson Pro font with fallbacks */
+.tw-passage a {
+  color: #2B9348;
+  font-family: 'Crimson Pro', serif;
 }
 
-/* Increase font size for headings */
-h1 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-top: 40px;
+/* Set the color of visited links to brown and use the Crimson Pro font with fallbacks */
+.tw-passage a:visited {
+  color: #855E42;
+  font-family: 'Crimson Pro', serif;
 }
 
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 30px;
+/* Set the color of buttons to olive green and use the Crimson Pro font with fallbacks */
+.tw-passage input[type="button"] {
+  background-color: #2B9348;
+  color: #FFF8E8;
+  font-family: 'Crimson Pro', serif;
+  font-size: 18px;
 }
 
-/* Make images more responsive */
-img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  box-shadow: 0px 0px 5px #ccc;
-  margin: 20px 0;
+/* Fallback font for when Crimson Pro is not available */
+.tw-story p, .tw-passage a, .tw-passage input[type="button"] {
+  font-family: serif;
 }
-
-/* Fallback font */
-body {
-  font-family: 'Pridi', sans-serif;
-}
-
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="425,400" size="100,100">What&#39;s your name? 
 
