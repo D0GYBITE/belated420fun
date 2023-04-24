@@ -9,46 +9,81 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 420cain.</tw-noscript></noscript></tw-story>
-<tw-storydata name="420cain" startnode="5" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="367098AB-CA94-4257-A78B-7D75B1541A65" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Set the background color to dark green */
+<tw-storydata name="420cain" startnode="5" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="367098AB-CA94-4257-A78B-7D75B1541A65" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* This sets the background color of the whole page to cyan */
 body {
-  background-color: #0D3B66;
+  background-color: #00BFB2;
 }
 
-/* Set the color of the story text to beige and use the Crimson Pro font with fallbacks */
-.tw-story p {
-  color: #FFF8E8;
-  font-family: 'Crimson Pro', serif;
+/* This sets the width and height of the story container to 80% and 100% of the viewport respectively */
+tw-story {
+  width: 80vw;
+  height: 100vh;
+}
+
+/* This centers the story container horizontally and vertically */
+tw-story {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* This sets the background color of the story container to white */
+tw-story {
+  background-color: #F7FFF7;
+}
+
+/* This sets the color of unclicked links to light green */
+tw-link {
+  color: #4ECDC4;
+}
+
+/* This sets the color of clicked links to light purple */
+tw-link-visited {
+  color: #C9A2CA; /* You can also use LightPurple as the color name */
+}
+
+/* This imports the Open Sans font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* This sets the font family and size of the story text to Open Sans with a fallback of Arial */
+tw-story tw-passage {
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 18px;
+  color: #333333; /* This sets the color of the story text to dark gray */
 }
 
-/* Set the color of links to olive green and use the Crimson Pro font with fallbacks */
-.tw-passage a {
-  color: #2B9348;
-  font-family: 'Crimson Pro', serif;
+/* This applies different styles for screens smaller than 600px wide */
+@media (max-width: 600px) {
+
+  /* This sets the width and height of the story container to 90% and 80% of the viewport respectively */
+  tw-story {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  /* This sets the font size of the story text to smaller */
+  tw-story tw-passage {
+    font-size: 14px;
+  }
+
 }
 
-/* Set the color of visited links to brown and use the Crimson Pro font with fallbacks */
-.tw-passage a:visited {
-  color: #855E42;
-  font-family: 'Crimson Pro', serif;
+/* This style hides the title attribute of tw-expression elements */
+tw-expression::before {
+  content: attr(title); /* Show the title as content */
+  position: absolute; /* Position it absolutely */
+  left: -9999px; /* Move it far away from the screen */
 }
 
-/* Set the color of buttons to olive green and use the Crimson Pro font with fallbacks */
-.tw-passage input[type="button"] {
-  background-color: #2B9348;
-  color: #FFF8E8;
-  font-family: 'Crimson Pro', serif;
-  font-size: 18px;
-}
+/* This style hides the undo and redo buttons */
+tw-icon[title="Undo"], tw-icon[title="Redo"] {
+  display: none;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="425,400" size="100,100">What&#39;s your name? 
+[(input: bind $player, &quot;&quot;)]
 
-/* Fallback font for when Crimson Pro is not available */
-.tw-story p, .tw-passage a, .tw-passage input[type="button"] {
-  font-family: serif;
-}
-
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="425,400" size="100,100">What&#39;s your name? 
-
-[(input: bind $player, &quot;X==&quot;)]
+(if: $player is &quot;&quot;)[
+    (set: $player to &quot;Anonymous&quot;)]
 
 [[ continue to pronoun select. -&gt; pronounselect ]]</tw-passagedata><tw-passagedata pid="2" name=" pronounselect " tags="" position="425,525" size="100,100">(set: $pronouns to &quot;&quot;) &lt;!-- Define $pronouns as a global variable with an initial value of &quot;&quot; --&gt;
 {
