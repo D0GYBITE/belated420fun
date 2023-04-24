@@ -60,6 +60,10 @@ tw-story tw-passage {
   tw-story {
     width: 90vw;
     height: 80vh;
+    /* This allows the text to scroll vertically if it overflows the container */
+    overflow-y: auto; 
+    /* This hides the horizontal scrollbar if it appears */
+    overflow-x: hidden; 
   }
 
   /* This sets the font size of the story text to smaller */
